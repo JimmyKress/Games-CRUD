@@ -1,0 +1,15 @@
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    align-items: center;
+    color: white;
+}
+
+.card-header button {
+    margin-left: auto; /* Mueve el botón hacia la derecha */
+}
+
+.col-md-4{
+    margin-top: 20px; 
+}

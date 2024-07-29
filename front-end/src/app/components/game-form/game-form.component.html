@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-4 offset-md-2"> <!-- sirve para centrar la columna -->
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" name="title" [(ngModel)]="game.title" placeholder="Title" class="form-control" autofocus>
+                    </div><br>
+                    <div class="form-group">
+                        <textarea  type="text" name="Description" [(ngModel)]="game.description" placeholder="Description" class="form-control" rows="2"></textarea>
+                    </div><br>
+                    <div class="form-group">
+                        <input type="url" (change)="onFileSelected($event)" accept="image/*" name="image" [(ngModel)]="game.image" placeholder="Image" class="form-control">
+                    </div><br>
+                    <button class="btn btn-success btn-block" (click)="edit ? updateGames() : saveGame()">
+                        Save <!-- Si edit es true, la expresión después del ? se ejecutará -->
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-body text-center">
+            <img [src]="game.image == '' ? '/assets/noimage.jpg' : game.image" class="card-img-top">
+            <h3>{{game.id}}. {{game.title == '' ? 'Game Title' : game.title}}</h3>
+            <p>{{game.description == '' ? 'Write your description' : game.description}}</p>
+            <p>{{game.create_at}}</p>
+        </div>
+    </div>
+</div>
+

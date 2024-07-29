@@ -1,0 +1,8 @@
+.btn-block {
+    width: 100%; 
+    display: block; /* Hace que el botón sea un bloque para ocupar todo el ancho disponible */
+}
+
+.card card-body{
+    align-items: center;
+}

@@ -1,0 +1,27 @@
+@for (game of games; track games) {
+<div class="col-md-4">
+    <div class="card text-center">
+        <div class="card-header">   
+
+            {{game.title}}
+            <button class="btn btn-danger" (click)="deleteGame(game.id)">
+                <i class="far fa-trash-alt"></i>
+            </button>
+            <br>
+
+        </div>
+        <img [src]="game.image" class="card-img-top">
+        <div class="card-body">
+
+                <p>{{game.description}}</p>
+                <a class="btn btn-info btn-block" (click)="editGame(game.id)">
+                    EDIT GAME
+                </a>
+              
+              
+        </div> 
+    </div>
+</div>
+} <br>
+
+
